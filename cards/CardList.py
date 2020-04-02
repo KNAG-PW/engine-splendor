@@ -1,5 +1,6 @@
 
 
-class Card_list:
+class CardList:
     def __init__(self, card_path):
         pass
+    
