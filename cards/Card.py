@@ -15,7 +15,7 @@ class Card:
         return self.level
 
     def get_points(self):
-        return self.cost
+        return self.points
 
     def get_colour(self):
         return self.colour
