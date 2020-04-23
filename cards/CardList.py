@@ -4,9 +4,9 @@ from cards.Card import Card
 
 def load_cards_from_file(card_path):
     cards = pd.read_csv(card_path)
-    card_list = [[] for i in range(max(cards.level))]
+    card_list = [[] for _ in range(max(cards.level))]
     for i, c in cards.iterrows():
-        card = Card([c.white, c.blue, c.green, c.red, c.black], c.color, c.level, c.points)
+        card = Card([c.white, c.blue, c.green, c.red, c.black], c.color, c.level, c.points, i)
         card_list[c.level-1].append(card)
     return card_list
 
